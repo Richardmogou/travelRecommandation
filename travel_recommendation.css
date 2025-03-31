@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --font-primary: "Open Sans", Arial, Helvetica, sans-serif;
+    --font-secondary: "Raleway", Arial, Helvetica, sans-serif;
+    --font-tertiary: "FuturaPT", Arial, Helvetica, sans-serif;
+    --radius: 0.125rem;
+    --sticky-top: 3.75rem;
+    --gutter-grid: 0.6875rem;
+    --jacadi-blue: #576ea5;
+    --navy-blue: rgb(1,30,65,0.4);
+    --light-blue: #f1f5ff; 
+    --buttons:rgb(3, 118, 120);
+}
+body{
+    background-image:url(paysageCanda1.jpg);
+    object-fit:contain;
+    background-position: center;
+    font-family: var(--font-primary);
+}
+
+section{
+    background-color: rgb(12, 13, 232,0.5);
+    backdrop-filter: blur(5px);
+    height:100vh;
+}
+header{
+    width: calc(100% - 3px); 
+    height: 100px;
+    
+    position:fixed;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--navy-blue);
+     
+
+}
+header a, button, h1{
+    font-family: var(--font-secondary);
+    color:var(--light-blue);
+    text-decoration: none;
+}
+header a{
+    font-size: large;
+    font-weight: 700;
+}
+
+
+nav{
+    
+    display: flex;
+    align-items: center;
+    
+    width: calc(100% - 10px);
+    justify-content: space-between;
+    height:80px;
+    
+       
+}
+.deux{
+    
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.trois{
+    
+    padding:.6em;
+    border-radius:20px;
+    background-color: var(--light-blue);
+}
+button{
+    background-color: var(--buttons);
+    padding: .3em;
+    border-radius: var(--radius);
+    border: none;
+}
+input{
+    border:none;
+    background-color: transparent;
+    color:var(--buttons);
+}
+.un{
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
+}
+.un .fa{
+    color:var(--light-blue);
+    font-size: 2em;
+    transform: rotate(-30deg);
+}
+.un h1{
+    font-size: 1em;
+}

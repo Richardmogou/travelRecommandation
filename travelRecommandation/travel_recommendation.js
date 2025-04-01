@@ -1,8 +1,10 @@
-// const url = './travel_recommendation.json';
+let travelData = {};
+document.addEventListener('DOMContentLoaded', function(){
+    // const url = './travel_recommendation.json';
 const url = './travelRecommandation/travel_recommendation.json';
 
 
-let travelData = {}; // This will store our fetched data
+ // This will store our fetched data
 
 fetch(url)
 .then(response => {
@@ -16,14 +18,32 @@ fetch(url)
 .then(data => {
     travelData = data; // Store the data for later use
     console.log(data);
+    
+    const searchTerm =localStorage.getItem('searchTerm');
+    if(searchTerm){
+        document.getElementById('searchInput').value=searchTerm;
+        displaySearchResults(searchTerm);
+        localStorage.removeItem('searchTerm');
+    }
 })
 .catch(error => {
     console.error("There has been a problem with your fetch:", error);
 });
+})
 
 // function to handle search
 function handleSearch() {
     const input = document.getElementById('searchInput').value.toLowerCase();
+    
+    localStorage.setItem('searchTerm',input);
+
+    if(!window.location.pathname.includes('travel_recommendation.html')){
+        window.location.href='/travelRecommandation/travel_recommendation.html';
+    }else{
+        displaySearchResults(input);
+    }
+}
+function displaySearchResults(input){
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
@@ -64,10 +84,12 @@ function handleSearch() {
 // Add event listener to the search button
 
 function clearResults() {
-    
+    localStorage.removeItem('searchTerm');
     document.getElementById('results').innerHTML = '';
     document.getElementById('searchInput').value = '';
 }
+//loading Page
+
 
 // Add event listeners
 document.getElementById('searchButton').addEventListener('click', handleSearch);

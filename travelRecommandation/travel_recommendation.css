@@ -91,6 +91,7 @@ input{
     background-color: transparent;
     color:var(--buttons);
 }
+
 .un{
     display: flex;
     width: 10%;

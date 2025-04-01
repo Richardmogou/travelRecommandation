@@ -66,16 +66,23 @@ nav{
     justify-content: space-around;
 }
 .trois{
-    
+    width: 25%;
     padding:.6em;
     border-radius:20px;
     background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-around;
+}
+.trois .fa{
+    cursor: pointer;
 }
 button{
     background-color: var(--buttons);
-    padding: .3em;
+    padding: .4em;
     border-radius: var(--radius);
     border: none;
+    cursor: pointer;
+    margin-right: .3em;
 }
 input{
     border:none;
@@ -88,6 +95,7 @@ input{
     justify-content: space-around;
     align-items: center;
     font-size: 2em;
+    cursor: pointer;
 }
 .un .fa{
     color:var(--light-blue);
@@ -95,5 +103,53 @@ input{
     transform: rotate(-30deg);
 }
 .un h1{
-    font-size: 1em;
+    font-size: .8em;
+    font-style: italic;
+}
+main{
+    
+    height: calc(100vh - 100px); 
+    position: relative;
+    top:98px
+}
+
+.left{
+    
+    width: 10%;
+    height: 700px;
+    position: absolute;
+}
+.sup{
+    
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vertic{
+    width: .1em;
+    height: 75%;
+    background-color: var(--light-blue);
+    border-radius: 50%;
+}
+.icons{
+    position: absolute;
+    font-size: 2em;
+    width: 100%;
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.icons .fab{
+    
+    color: var(--light-blue);
+    
+    margin-bottom: 1em;
+    
+
 }
